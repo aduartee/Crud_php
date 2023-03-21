@@ -34,7 +34,12 @@
             <input type="checkbox" id="cor_preferida2" name="cor_preferida[]" value="azul">
             <label for="cor_preferida2">Azul</label></br>
             <input type="checkbox" id="cor_preferida3" name="cor_preferida[]" value="verde">
-            <label for="cor_preferida3">Verde</label>
+            <label for="cor_preferida3">Verde</label></br></br>
+            
+
+            <input type="submit" value="Inserir">
+
+    </form>
 
 </body>
 </html>
