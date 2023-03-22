@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,39 +7,45 @@
     <title>Crud Arthur</title>
 </head>
 <body>
-    <form method="POST" action="salvar.php">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="ex: João" required>
-            <br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
-            <br><br>
-            <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" placeholder="(DD)98989828" required>
-            <br><br>
-
-            <label for="esporte_preferido">Esporte Preferido:</label>
-            <select id="esporte_preferido" name="esporte_preferido" required>
-                <option value="">Escolha uma opção</option>
-                <option value="futebol">Futebol</option>
-                <option value="volei">Vôlei</option>
-                <option value="basquete">Basquete</option>
-                <option value="natacao">Natação</option>
-            </select>
-            <br><br>
-
-            <label for="cor_preferida">Cor Preferida:</label></br></br>
-            <input type="checkbox" id="cor_preferida1" name="cor_preferida[]" value="vermelho">
-            <label for="cor_preferida1">Vermelho</label></br>
-            <input type="checkbox" id="cor_preferida2" name="cor_preferida[]" value="azul">
-            <label for="cor_preferida2">Azul</label></br>
-            <input type="checkbox" id="cor_preferida3" name="cor_preferida[]" value="verde">
-            <label for="cor_preferida3">Verde</label></br></br>
-            
-
-            <input type="submit" value="Inserir">
-
-    </form>
-
+	<h1> Crud Arthur</h1>
+	<!-- linka para a pagina onde ocorre se insere os dados -->
+	<a href="adiciona.php">Insira os dados</a>
+	<br><br>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Telefone</th>
+				<th>Esporte Preferido</th>
+				<th>Cor Preferida</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php
+				//Aqui está sendo incluido o arquivo de conexão o banco
+				include 'conecta.php';
+				//Colocando dentro de uma variavel a consulta que é realizada no banco de dados, esse consulta pega todos os campos da tabela "pessoa"
+				$query = $conn->query("SELECT * FROM pessoa");
+				//realizando um loop que percorre todos os dados da tabela
+				while($row = $query->fetch_assoc()) {
+			?>
+			<tr>
+				<!-- Vai printar na tela o nome na primeira coluna,  email na segunda, telefone na terceira, esporte na quarta e cor na quinta  -->
+				<td><?php echo $row['nome']; ?></td>
+				<td><?php echo $row['email']; ?></td>
+				<td><?php echo $row['telefone']; ?></td>
+				<td><?php echo $row['esporte_preferido']; ?></td>
+				<td><?php echo $row['cor_preferida']; ?></td>
+				<td>
+					<!-- ao clicar remove ou edita essa tabela, linkando para os arquivos "edita.php" e "remove.php" -->
+					<a href="edita.php?id=<?php echo $row['id']; ?>">Editar</a>
+					<a href="remove.php?id=<?php echo $row['id']; ?>">Remover</a>
+				</td>
+			</tr>
+			<?php } ?>
+		</tbody>
+	</table>
 </body>
 </html>
