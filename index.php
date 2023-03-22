@@ -24,10 +24,10 @@
 		</thead>
 		<tbody>
 			<?php
-				//Aqui está sendo incluido o arquivo de conexão o banco
+				//Aqui está sendo chamado o arquivo de conexão o banco atraves da função include
 				include 'conecta.php';
 				//Colocando dentro de uma variavel a consulta que é realizada no banco de dados, esse consulta pega todos os campos da tabela "pessoa"
-				$query = $conn->query("SELECT * FROM pessoa");
+				$query = $conn->query("SELECT * FROM pessoas");
 				//realizando um loop que percorre todos os dados da tabela
 				while($row = $query->fetch_assoc()) {
 			?>
