@@ -28,11 +28,11 @@
 				include 'conecta.php';
 				//Colocando dentro de uma variavel a consulta que é realizada no banco de dados, esse consulta pega todos os campos da tabela "pessoa"
 				$query = $conn->query("SELECT * FROM pessoas");
-				//realizando um loop que percorre todos os dados da tabela
+				//realizando um loop que percorre todos os dados da tabela, a função "fetch_assoc" retorna um array que contém os registros
 				while($row = $query->fetch_assoc()) {
 			?>
 			<tr>
-				<!-- Vai printar na tela o nome na primeira coluna,  email na segunda, telefone na terceira, esporte na quarta e cor na quinta  -->
+				<!-- loop vai percorrendo e printando na tela o nome na primeira coluna,  email na segunda, telefone na terceira, esporte na quarta e cor na quinta  -->
 				<td><?php echo $row['nome']; ?></td>
 				<td><?php echo $row['email']; ?></td>
 				<td><?php echo $row['telefone']; ?></td>
@@ -41,7 +41,7 @@
 				<td>
 					<!-- ao clicar remove ou edita essa tabela, linkando para os arquivos "edita.php" e "remove.php" -->
 					<a href="edita.php?id=<?php echo $row['id']; ?>">Editar</a>
-					<a href="remove.php?id=<?php echo $row['id']; ?>">Remover</a>
+					<a href="remover.php?id=<?php echo $row['id']; ?>">Remover</a>
 				</td>
 			</tr>
 			<?php } ?>

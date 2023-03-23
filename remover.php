@@ -1,8 +1,8 @@
 <?php 
-    //Aqui está sendo chamado o arquivo de conexão o banco atraves da função include
+    //Chamando o arquivo de conexão o banco atraves da função include
     include 'conecta.php'; 
 
-    // valor do Id que foi capturado por meio do "$_GET" está sendo jogado para uma variavel, isso indica com registro deve ser exlcuido
+    //valor do Id que foi capturado por meio do "$_GET" está sendo jogado para uma variavel, isso indica qual registro deve ser excluido
     $id = $_GET['id'];
 
     //por meio do operador "->" estamos chamando o metodo query que faz parte do objeto conn

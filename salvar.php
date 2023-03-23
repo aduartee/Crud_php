@@ -1,5 +1,5 @@
 <?php
-    //Aqui está sendo chamado o arquivo de conexão o banco atraves da função include
+   //Chamando o arquivo de conexão o banco atraves da função include
     include 'conecta.php';
 
     //Guarda os dados dos inputs em varivaveis
@@ -7,7 +7,7 @@
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $esporte_preferido = $_POST['esporte_preferido'];
-    $cor_preferida = implode(", ", $_POST['cor_preferida']);
+    $cor_preferida = implode(", ", $_POST['cor_preferida']); //atribui a variavel, mas a função "implode" transforma tudo em uma unica string e sepera elas por virgula
     
 
 
