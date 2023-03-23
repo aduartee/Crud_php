@@ -1,15 +1,15 @@
 <?php
 	// Parametros para fazer a conexão com o banco
 	$servername = "localhost";
-	$username = "root";
-	$password = "senha";
-	$dbname = "crudphp";
+	$username = "root1";
+	$password = "";
+	$dbname = "crudarthur";
 
 	// Parte responsavel pela conexão com o banco de dados
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
-	// Verificação da conexão e sai e retorna uma mensagem caso não ocorra a conexão
+	// Joga uma mensagem de erro caso a conexão não de certo
 	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
+	    die("Erro na conexão: " . $conn->connect_error);
 	}
 ?>
