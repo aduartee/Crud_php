@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/index.css"> 
     <title>Crud Arthur</title>
 </head>
 <body>
-	<h1> Crud Arthur</h1>
+	<h1> Tabela de registros</h1>
 	<!-- linka para a pagina onde ocorre se insere os dados -->
 	<a href="adiciona.php">Insira os dados</a>
 	<br><br>
