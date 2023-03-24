@@ -8,7 +8,7 @@
     <title>Crud Arthur</title>
 </head>
 <body>
-	<h1> Tabela de registros</h1>
+	<h1>Tabela de registros</h1>
 	<!-- linka para a pagina onde ocorre se insere os dados -->
 	<a href="adiciona.php">Insira os dados</a>
 	<br><br>

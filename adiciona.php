@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/adiciona.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Crud Arthur</title>
 </head>
 <body>
     <?php
         include 'base.php';
     ?>
-    <div id="quadrado"> 
+    <div id="quadrado" class="animate__animated animate__zoomIn"> 
         <h2 id="titulo"> Adicionando usuários </h2>
         <form method="POST" action="salvar.php">
                 <label for="nome">Nome:</label>
