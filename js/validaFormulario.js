@@ -7,7 +7,7 @@ function validaFormulario() {
     var corPreferida = document.querySelectorAll('input[name="cor_preferida[]"]:checked');
   
     //Validar se os campos foram preechidos
-    if (nome.length == 0 || email.length == 0 || telefone.length == 0 || esportePreferido == 0 || corPreferida.length == 0) {
+    if (nome.length == '' || email.length == '' || telefone.length == '' || esportePreferido == '' || corPreferida.length == '') {
       alert("Por favor, preencha todos os campos.");
       return false;
     }
@@ -22,12 +22,6 @@ function validaFormulario() {
   if (telefone.length > 11){
       alert("Insira um número de telefone válido");
       return false
-  }
-
-  //Verifica se o campo cor prefirada está em branco, caso estiver retorna um alert
-  if (cor_preferida.length === 0) {
-  alert('Por favor, selecione pelo menos uma cor');
-  return false;
   }
   
     // Se todos os campos estiverem preenchidos corretamente, retorna true para enviar o formulário

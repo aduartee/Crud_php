@@ -23,7 +23,7 @@
                 <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
                 <br><br>
                 <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" placeholder="(DD)98989828" required>
+                <input type="text" id="telefone" name="telefone" placeholder="ex: DD98989828" required>
                 <br><br>
 
                 <label for="esporte_preferido">Esporte Preferido:</label>

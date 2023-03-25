@@ -25,7 +25,7 @@
 
 	<div id="quadrado" class="animate__animated animate__zoomIn"> 
 		<h1>Editar Tabela</h1>
-		<form action="atualiza.php" method="POST">
+		<form id="formulario" action="atualiza.php" method="POST" onsubmit="return validaEdicao()">
 			<input type="hidden" name="id" value="<?php echo $row['id']; ?>"> <!-- Cria um input do tipo escondido para armazenar o Id do campo que está sendo editado -->
 			<label for="nome">Nome:</label>
 			<input type="text" id="nome" name="nome" value="<?php echo $row['nome']; ?>" required> <!--  Cria um input para realizar a troca do nome-->
@@ -65,7 +65,11 @@
 			
 			<input type="submit" value="Salvar">
 			<a id="cancelar" href="index.php">Cancelar</a>
-</div>
-	</form>
+
+		</form>
+	</div>
+	<footer> 
+		<script src="js/validaEdicao.js"></script>
+	</footer>
 </body>
 </html>
