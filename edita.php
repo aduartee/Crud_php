@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/edita.css"> 
-
-
+	<link rel="shortcut icon" href="imagens/favicon_crud.png" type="image/x-icon"/>
     <title>Crud Arthur</title>
 </head>
 <body>

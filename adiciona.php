@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/adiciona.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="imagens/favicon_crud.png" type="image/x-icon" />
     <title>Crud Arthur</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
     ?>
     <div id="quadrado" class="animate__animated animate__zoomIn"> 
         <h2 id="titulo"> Adicionando usuários </h2>
-        <form method="POST" action="salvar.php">
+        <form id="formulario" method="POST" action="salvar.php" onsubmit="return validaFormulario()">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="ex: João" required>
                 <br><br>
@@ -46,6 +47,8 @@
                 <input type="submit" value="Inserir">
     </div>
     </form>
-
+<footer>
+    <script src="js/validaFormulario.js"></script>
+</footer>
 </body>
 </html>
